@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading1">Javascript Coding Interview Question #1</h1>
+                <h2 class="heading2">Question : How To find duplicate elements in array in javascript eg: [1,2,8,2,9,8,3,4,3]</h2>
+                <h3 class="heading3">Answer : The duplicate Value is <span class="dupvalclass"></span></h3>
+                <hr/><br>
+                <script>
+                    const heading1 = document.querySelector('.heading1');
+                    const heading2 = document.querySelector('.heading2');
+                    const heading3 = document.querySelector('.heading3');
+                    const resultval = document.querySelector('.dupvalclass');
+                    const arrVal = [1,2,8,2,9,8,3,4,3];
+                    const duplicateVal = arrVal.filter((ele,index,arrVal)=>arrVal.indexOf(ele)!==index);
+                    console.log(duplicateVal);
+                    resultval.textContent = duplicateVal;
+                    heading1.style.backgroundColor = "blue";
+                    heading1.style.color = "white";
+                    heading1.style.padding = "7px";
+                </script>
+            </div>
+
+            <div class="col-md-12">
+                <h1 class="q2heading1">Javascript Coding Interview Question #2</h1>
+                <h2 class="q2heading2">Question : How To find max/min in a given array in javascript eg: [1,2,89,12,19,28,3,14,33]</h2>
+                <h3 class="q2heading3">Answer : The maximum Value is <span class="q2dupvalclass"></span></h3>
+                <hr/><br>
+                <script>
+                    const q2heading1 = document.querySelector('.q2heading1');
+                    const q2dupvalclass = document.querySelector('.q2dupvalclass');
+                    q2heading1.style.backgroundColor = "blue";
+                    q2heading1.style.color = "white";
+                    q2heading1.style.padding = "7px";
+
+
+                    const q2arrVal = [1,2,89,12,19,28,3,14,33];
+                    const maxFunction = (arr)=>{
+                        return arr.reduce(function(pre,cur){
+                                return pre>cur ? pre:cur
+                            })
+                    }
+                    console.log(maxFunction(q2arrVal));
+                    q2dupvalclass.textContent = maxFunction(q2arrVal);
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
